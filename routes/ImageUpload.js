@@ -75,7 +75,7 @@ express.post('/images',verified, upload.single('image'), async (req, res) => {
         // apply filter
         // resize
         const result = await uploadFile(file);
-        await unlinkFile(file.path);
+        //await unlinkFile(file.path);
         const description = req.body.description;
         const reqImageData = new ImageUploadSchema({
             apartment_ref: apartment_ref,
