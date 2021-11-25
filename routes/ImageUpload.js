@@ -60,7 +60,7 @@ express.post('/images',verified, upload.single('image'), async (req, res) => {
     const file = req.file
     const { apartment_ref, UID } = req.body;
     const userDetails = req.user;
-    try {
+    /*try {
         Joi.assert(req.body, imageSchema);
     } catch (error) {
         if (error) {
@@ -70,7 +70,7 @@ express.post('/images',verified, upload.single('image'), async (req, res) => {
                 data: {},
             });
         }
-    }
+    }*/
     try {
         // apply filter
         // resize
